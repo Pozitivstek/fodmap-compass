@@ -1,0 +1,20 @@
+# Обратный SSH-туннель: VPS 127.0.0.1:8095 → домашний сервер 127.0.0.1:8095 (контейнер ФудКомпаса).
+# Ставится на домашний сервер: /etc/systemd/system/fodmap-tunnel.service
+[Unit]
+Description=FoodCompass reverse SSH tunnel to VPS
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+User=linux
+ExecStart=/usr/bin/ssh -N -T \
+    -i /home/linux/.ssh/fodmap_tunnel \
+    -o ServerAliveInterval=30 -o ServerAliveCountMax=3 \
+    -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=yes \
+    -R 127.0.0.1:8095:127.0.0.1:8095 \
+    fodmaptunnel@188.130.207.170
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

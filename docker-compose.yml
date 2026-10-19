@@ -1,0 +1,20 @@
+services:
+  fodmap:
+    build: .
+    image: fodmap-compass:latest
+    container_name: fodmap-compass
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DB_PATH: /app/storage/fodmap.db
+      PORT: "8000"
+    # Наружу не публикуется: только localhost, дальше — SSH-туннель на VPS (deploy/).
+    ports:
+      - "127.0.0.1:8095:8000"
+    volumes:
+      - ./storage:/app/storage
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

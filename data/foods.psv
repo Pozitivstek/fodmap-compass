@@ -1,0 +1,360 @@
+# Каталог продуктов ФудКомпаса.
+# Поля через «|»: id | название | синонимы | англ. названия | категория | эмодзи | ккал | белки | жиры | углеводы | клетчатка (на 100 г)
+#   | low_g — безопасная (зелёная) порция, г | high_g — с этой порции FODMAP высокий, г | группы FODMAP | аллергены | метки
+#   | обычная порция «граммы:описание» | чем заменить (id) | заметка
+# Группы: fruc — фруктаны, gos — ГОС, lac — лактоза, fru — избыток фруктозы, sor — сорбит и полиолы, man — маннит.
+# Пустые группы = FODMAP не обнаружены (можно по аппетиту). Пустой low_g при непустых группах = безопасной порции нет.
+# Порции — по открытым таблицам Monash University / Diet vs Disease (2018–2024), выбраны более осторожные значения.
+# Это справочник, а не медицинская рекомендация.
+
+# ---------- Овощи ----------
+carrot|Морковь|морковка|carrot,carrots|veg|🥕|41|0.9|0.2|9.6|2.8|||||vegan|80:1 морковь||
+potato|Картофель|картошка,картофель отварной|potato,potatoes|veg|🥔|77|2|0.1|17|2.2|||||vegan|150:1 крупный клубень||
+sweet_potato|Батат|сладкий картофель|sweet potato|veg|🍠|86|1.6|0.1|20|3|75|150|man|||75:½ чашки|potato,pumpkin_kabocha|
+tomato|Помидор|томат,помидоры|tomato,tomatoes|veg|🍅|18|0.9|0.2|3.9|1.2|||||vegan|120:1 средний||
+cherry_tomato|Помидоры черри|черри|cherry tomato,cherry tomatoes|veg|🍅|18|0.9|0.2|3.9|1.2|75|200|fru|||75:5 штук|tomato|
+canned_tomatoes|Томаты консервированные|томаты в собственном соку|canned tomatoes,chopped tomatoes|veg|🥫|21|1|0.2|4.5|1.1|100|200|fru|||100:½ чашки|tomato|Без лука и чеснока в составе
+cucumber|Огурец|огурцы|cucumber|veg|🥒|15|0.7|0.1|3.6|0.5|||||vegan|100:1 огурец||
+zucchini|Кабачок|цукини|zucchini,courgette|veg|🥒|17|1.2|0.3|3.1|1|65|100|fruc|||65:⅓ кабачка|cucumber,eggplant|
+eggplant|Баклажан|баклажаны|eggplant,aubergine|veg|🍆|25|1|0.2|6|3|75|180|sor|||75:1 чашка кубиками|zucchini|
+bell_pepper_red|Перец болгарский красный|сладкий перец,паприка свежая|red bell pepper,red capsicum,red pepper|veg|🫑|31|1|0.3|6|2.1|43|75|fru|||43:¼ перца|bell_pepper_green|
+bell_pepper_green|Перец болгарский зелёный|зелёный перец|green bell pepper,green capsicum|veg|🫑|20|0.9|0.2|4.6|1.7|75|150|fruc|||75:½ перца||
+broccoli|Брокколи|брокколи соцветия|broccoli|veg|🥦|34|2.8|0.4|7|2.6|75|150|fru|||75:¾ чашки соцветий||Стебли богаче фруктозой, чем соцветия
+cauliflower|Цветная капуста|цветная|cauliflower|veg|🥦|25|1.9|0.3|5|2|75|150|man,fruc|||75:¾ чашки|broccoli|Данные Monash по цветной капусте обновлялись — проверьте личную переносимость
+white_cabbage|Капуста белокочанная|капуста|white cabbage,cabbage|veg|🥬|25|1.3|0.1|5.8|2.5|75|150|sor,fruc|||75:1 чашка шинкованной||
+red_cabbage|Капуста краснокочанная|красная капуста|red cabbage|veg|🥬|31|1.4|0.2|7.4|2.1|75|150|fruc|||75:¾ чашки||
+savoy_cabbage|Капуста савойская|савойская|savoy cabbage|veg|🥬|27|2|0.1|6.1|3.1|40|75|fruc|||40:½ чашки|white_cabbage|
+chinese_cabbage|Пекинская капуста|пекинка,капуста напа|napa cabbage,wombok,chinese cabbage|veg|🥬|16|1.2|0.2|3.2|1.2|75|500|fruc|||75:1 чашка||
+bok_choy|Бок-чой|пак-чой,китайская капуста бок-чой|bok choy,pak choi|veg|🥬|13|1.5|0.2|2.2|1|75|300|sor|||75:1 чашка||
+spinach|Шпинат|шпинат свежий,бейби шпинат|spinach,baby spinach|veg|🥬|23|2.9|0.4|3.6|2.2|||||vegan|40:1 чашка листьев||
+lettuce|Салат листовой|айсберг,листовой салат,салат романо|lettuce,iceberg lettuce,romaine|veg|🥬|14|0.9|0.1|3|1.2|||||vegan|50:горсть листьев||
+arugula|Руккола|рукола|arugula,rocket|veg|🌿|25|2.6|0.7|3.7|1.6|||||vegan|20:горсть||
+celery|Сельдерей стеблевой|сельдерей,стебли сельдерея|celery|veg|🥬|16|0.7|0.2|3|1.6|10|75|man|celery||10:5 см стебля|cucumber|Порции по разным версиям Monash: 10–50 г
+celeriac|Сельдерей корневой|корень сельдерея|celeriac|veg|🥔|42|1.5|0.3|9|1.8|75|120|man|celery||75:½ корня|potato|
+onion|Лук репчатый|лук,луковица,белый лук|onion,onions,yellow onion,white onion|veg|🧅|40|1.1|0.1|9.3|1.7|||fruc|||40:½ луковицы|green_onion_tops,leek_leaves,garlic_oil,asafoetida|Один из главных источников фруктанов
+red_onion|Лук красный|красный лук,ялтинский лук|red onion|veg|🧅|40|1.1|0.1|9.3|1.7|||fruc|||40:½ луковицы|green_onion_tops,garlic_oil|
+shallot|Лук-шалот|шалот|shallot,shallots|veg|🧅|72|2.5|0.1|17|3.2|||fruc|||20:1 луковица|green_onion_tops,garlic_oil|
+green_onion_tops|Зелёный лук (перья)|зелёный лук,лук перо,перо лука|scallion greens,spring onion greens,green onion|veg|🌱|32|1.8|0.2|7.3|2.6|||||vegan|10:2 ст. л.||Только зелёная часть, без белой луковички
+leek_leaves|Лук-порей (зелёная часть)|порей листья|leek leaves|veg|🌱|61|1.5|0.3|14|1.8|40|75|fruc|||40:½ чашки||
+leek_bulb|Лук-порей (белая часть)|порей,лук порей|leek|veg|🧅|61|1.5|0.3|14|1.8|||fruc|||50:½ стебля|leek_leaves|
+garlic|Чеснок|чеснок свежий,зубчик чеснока|garlic|veg|🧄|149|6.4|0.5|33|2.1|||fruc|||3:1 зубчик|garlic_oil,asafoetida|Фруктаны растворимы в воде — даже бульон с чесноком высокий
+mushrooms|Шампиньоны свежие|грибы,шампиньоны|mushroom,mushrooms,button mushroom|veg|🍄|22|3.1|0.3|3.3|1|7|50|man|||70:1 чашка|canned_champignons,oyster_mushroom|
+canned_champignons|Шампиньоны консервированные|грибы консервированные|canned mushrooms|veg|🍄|25|1.9|0.3|4.6|2.4|75|150|man|||75:½ чашки||Консервирование уменьшает маннит
+oyster_mushroom|Вешенки|вёшенки|oyster mushroom|veg|🍄|33|3.3|0.4|6|2.3|75|200|man|||75:1 чашка||
+asparagus|Спаржа|спаржа зелёная|asparagus|veg|🌱|20|2.2|0.1|3.9|2.1|12|75|fru,fruc|||12:1 побег|green_beans|
+artichoke|Артишок|артишоки|artichoke|veg|🌱|47|3.3|0.2|10.5|5.4|||fruc|||60:½ артишока||
+jerusalem_artichoke|Топинамбур|земляная груша|jerusalem artichoke|veg|🥔|73|2|0|17.4|1.6|||fruc|||60:||Очень высокий по фруктанам
+green_beans|Стручковая фасоль|фасоль стручковая,зелёная фасоль|green beans,string beans|veg|🫛|31|1.8|0.2|7|2.7|75|125|sor,man|||75:15 стручков||
+green_peas|Зелёный горошек|горошек,горох зелёный|green peas,peas|veg|🫛|81|5.4|0.4|14|5.7|30|75|gos,fruc|||30:2 ст. л.|green_beans|
+corn|Кукуруза сладкая|кукуруза,кукуруза консервированная|sweet corn,corn|veg|🌽|86|3.3|1.4|19|2.7|38|75|sor,fruc|||38:½ початка||
+beetroot|Свёкла|свекла,бурак|beetroot,beet|veg|🟣|43|1.6|0.2|9.6|2.8|20|75|gos,fruc|||20:2 ломтика||Монаш в 2024 указывал до 75 г — начните с малой порции
+pumpkin_kabocha|Тыква (японская, кабоча)|тыква,кабоча|pumpkin,kabocha,japanese pumpkin|veg|🎃|34|1|0.1|8.5|1.5|75|300|fruc|||75:½ чашки||
+butternut|Тыква мускатная|баттернат,мускатная тыква|butternut squash|veg|🎃|45|1|0.1|12|2|45|90|man,fru|||45:⅓ чашки|pumpkin_kabocha|
+radish|Редис|редиска|radish|veg|🔴|16|0.7|0.1|3.4|1.6|||||vegan|50:4–5 штук||
+daikon|Дайкон|редька белая|daikon|veg|🥕|18|0.6|0.1|4.1|1.6|||||vegan|75:½ чашки||
+turnip|Репа|репка|turnip|veg|🥔|28|0.9|0.1|6.4|1.8|75|150|gos,sor|||75:½ чашки||
+parsnip|Пастернак|корень пастернака|parsnip|veg|🥕|75|1.2|0.3|18|4.9|||||vegan|75:½ корня||
+fennel|Фенхель|фенхель клубень|fennel|veg|🌿|31|1.2|0.2|7.3|3.1|75|150|fruc,fru|||75:½ чашки||
+kale|Кейл|капуста кале,кудрявая капуста|kale|veg|🥬|49|4.3|0.9|8.8|3.6|75|150|gos|||75:1 чашка||
+brussels|Брюссельская капуста|брюссельская|brussels sprouts|veg|🥬|43|3.4|0.3|9|3.8|38|75|fruc|||38:2 кочанчика|broccoli|
+okra|Бамия|окра|okra|veg|🌱|33|1.9|0.2|7.5|3.2|70|100|fruc|||70:6 стручков||
+chili|Перец чили свежий|чили,острый перец|chili,chilli,chili pepper|veg|🌶️|40|1.9|0.4|8.8|1.5|28|50|fruc|||11:1 стручок||
+ginger|Имбирь свежий|имбирь,корень имбиря|ginger|veg|🫚|80|1.8|0.8|18|2|||||vegan|5:1 ч. л. тёртого||
+olives|Оливки и маслины|оливки,маслины|olives|veg|🫒|115|0.8|10.7|6.3|3.2|||||vegan|60:15 штук||
+pickles|Огурцы маринованные|корнишоны,маринованные огурцы|pickles,gherkins|veg|🥒|11|0.3|0.2|2.3|1|75|150|fruc|||75:5 корнишонов|cucumber|Если в маринаде есть чеснок или лук — фруктаны переходят в рассол
+sauerkraut|Квашеная капуста|капуста квашеная|sauerkraut|veg|🥬|19|0.9|0.1|4.3|2.9|20|75|man|||20:1 ст. л.||
+nori|Нори|водоросли нори|nori,seaweed|veg|🟩|188|29|1.7|40|36|||||vegan|5:2 листа||
+bean_sprouts|Ростки маша|проростки,соевые ростки|bean sprouts|veg|🌱|30|3|0.2|6|1.8|||||vegan|50:½ чашки||
+chard|Мангольд|листовая свёкла|chard,silverbeet|veg|🥬|19|1.8|0.2|3.7|1.6|||||vegan|80:1 чашка||
+endive|Цикорий салатный|эндивий,витлуф|endive,chicory leaves|veg|🥬|17|1.3|0.2|4|3.1|75|150|gos,man|||40:4 листа||
+tomato_paste|Томатная паста|паста томатная|tomato paste|sauce|🥫|82|4.3|0.5|18.9|4.1|28|56|fru,fruc|||28:2 ст. л.||
+
+# ---------- Фрукты и ягоды ----------
+avocado|Авокадо|авокадо хасс|avocado|fruit|🥑|160|2|14.7|8.5|6.7|30|80|sor|||30:⅕ плода||Порция по разным данным Monash 30–60 г
+banana_firm|Банан (твёрдый, зеленоватый)|банан,бананы,незрелый банан|banana,firm banana,unripe banana|fruit|🍌|89|1.1|0.3|23|2.6|100|150|fruc|||100:1 средний||Чем спелее банан, тем больше фруктанов
+banana_ripe|Банан спелый|спелый банан,банан с пятнышками|ripe banana|fruit|🍌|89|1.1|0.3|23|2.6|35|100|fruc|||35:⅓ банана|banana_firm|
+apple|Яблоко|яблоки|apple,apples|fruit|🍎|52|0.3|0.2|14|2.4|20|40|fru,sor|||150:1 среднее|orange,kiwi,strawberry|Один из самых частых триггеров
+pear|Груша|груши|pear,pears|fruit|🍐|57|0.4|0.1|15|3.1|4|20|fru,sor|||170:1 средняя|orange,kiwi|
+orange|Апельсин|апельсины|orange,oranges|fruit|🍊|47|0.9|0.1|12|2.4|130|260|fru|||130:1 средний||
+mandarin|Мандарин|мандарины,клементин|mandarin,clementine,tangerine|fruit|🍊|53|0.8|0.3|13|1.8|90|270|fru|||90:1–2 штуки||
+kiwi|Киви|киви зелёный|kiwi,kiwifruit|fruit|🥝|61|1.1|0.5|15|3|150|280|fruc|||75:1 средний||
+strawberry|Клубника|земляника,клубника садовая|strawberry,strawberries|fruit|🍓|32|0.7|0.3|7.7|2|65|140|fru|||65:5 ягод||
+blueberry|Голубика и черника|голубика,черника|blueberry,blueberries|fruit|🫐|57|0.7|0.3|14|2.4|40|150|fruc|||40:20 ягод||
+raspberry|Малина|малина садовая|raspberry,raspberries|fruit|🍓|52|1.2|0.7|12|6.5|58|100|fru|||30:10 ягод||
+blackberry|Ежевика|ежевика садовая|blackberry,blackberries|fruit|🫐|43|1.4|0.5|10|5.3|30|60|fru,sor|||30:5 ягод|raspberry|
+cherry|Вишня и черешня|вишня,черешня|cherry,cherries|fruit|🍒|63|1.1|0.2|16|2.1|20|40|sor,fru|||20:3 ягоды|strawberry|
+grapes|Виноград|виноград зелёный,виноград красный|grape,grapes|fruit|🍇|69|0.7|0.2|18|0.9|11|75|fru|||11:3 ягоды|strawberry,kiwi|По обновлённым данным Monash 2024
+watermelon|Арбуз|арбуз мякоть|watermelon|fruit|🍉|30|0.6|0.2|7.6|0.4|18|75|fruc,man,fru|||18:1 маленький кусочек|melon|
+melon|Дыня (канталупа)|дыня,канталупа|cantaloupe,rockmelon,melon|fruit|🍈|34|0.8|0.2|8|0.9|120|240|fruc|||120:¾ чашки||
+honeydew|Дыня медовая|дыня зелёная|honeydew melon|fruit|🍈|36|0.5|0.1|9|0.8|90|180|fruc|||90:½ чашки||
+pineapple|Ананас|ананас свежий|pineapple|fruit|🍍|50|0.5|0.1|13|1.4|140|220|fruc|||140:1 чашка||
+mango|Манго|манго свежее|mango|fruit|🥭|60|0.8|0.4|15|1.6|7|40|fru|||120:½ манго|pineapple,papaya|
+peach|Персик|персики жёлтые|peach,yellow peach|fruit|🍑|39|0.9|0.3|9.5|1.5|100|160|fru,sor|||100:1 средний||Белые персики — до 19 г (сорбит)
+nectarine|Нектарин|нектарины|nectarine|fruit|🍑|44|1.1|0.3|10.5|1.7|85|150|sor,fru|||85:½ плода||
+apricot|Абрикос|абрикосы|apricot,apricots|fruit|🍑|48|1.4|0.4|11|2|60|120|sor,fruc|||60:1–2 абрикоса||
+plum|Слива|сливы|plum,plums|fruit|🟣|46|0.7|0.3|11|1.4|||sor|||70:1 слива|mandarin,kiwi|
+persimmon|Хурма|хурма королёк|persimmon|fruit|🟠|70|0.6|0.2|18.6|3.6|60|100|fruc|||60:½ плода||
+pomegranate|Гранат (зёрна)|гранат|pomegranate|fruit|🔴|83|1.7|1.2|19|4|42|80|fruc,man|||42:¼ чашки зёрен||
+lemon|Лимон|лимоны|lemon|fruit|🍋|29|1.1|0.3|9.3|2.8|60|200|fruc|||20:долька||
+lime|Лайм|лаймы|lime|fruit|🍋|30|0.7|0.2|10.5|2.8|60|200|fruc|||20:долька||
+grapefruit|Грейпфрут|грейпфруты|grapefruit|fruit|🍊|42|0.8|0.1|10.7|1.6|90|180|fru|||90:½ плода||
+passionfruit|Маракуйя|маракуя|passion fruit,passionfruit|fruit|🟣|97|2.2|0.7|23|10|46|100|fruc|||46:2 плода||
+papaya|Папайя|папая|papaya,pawpaw|fruit|🟠|43|0.5|0.3|11|1.7|||||vegan|140:1 чашка||
+dragonfruit|Питахайя|драконий фрукт|dragon fruit,pitaya|fruit|🐉|60|1.2|0|13|3|||||vegan|150:1 плод||
+rhubarb|Ревень|черешки ревеня|rhubarb|fruit|🌿|21|0.9|0.2|4.5|1.8|||||vegan|150:1 чашка||
+coconut_shred|Кокосовая стружка|кокос,стружка кокосовая|desiccated coconut,shredded coconut|fruit|🥥|660|7|65|24|16|30|60|sor,fruc|||15:2 ст. л.||
+dates|Финики|финик|dates,medjool dates|fruit|🟤|282|2.5|0.4|75|8|20|40|fruc,sor|||20:1 финик||
+raisins|Изюм|изюм кишмиш|raisins,sultanas|fruit|🍇|299|3.1|0.5|79|3.7|4|20|fru,fruc|||30:1 горсть|cranberry_dried|
+dried_apricot|Курага|абрикосы сушёные|dried apricots|fruit|🟠|241|3.4|0.5|63|7.3|||sor|||30:4 штуки|cranberry_dried|
+prunes|Чернослив|сливы сушёные|prunes|fruit|🟤|240|2.2|0.4|64|7.1|||sor,fruc|||30:3 штуки||
+figs|Инжир|инжир свежий,смоква|figs,fig|fruit|🟣|74|0.8|0.3|19|2.9|7|40|fru,fruc|||50:1 плод||
+cranberry_dried|Клюква сушёная|сушёная клюква|dried cranberries|fruit|🔴|308|0.1|1.4|82|5.3|22|40|fruc|||22:1 ст. л.||
+cranberry|Клюква свежая|клюква|cranberry,cranberries|fruit|🔴|46|0.4|0.1|12|4.6|||||vegan|50:½ чашки||Свежая клюква по анализам почти без FODMAP
+
+# ---------- Крупы, хлеб, мука ----------
+rice_white|Рис белый (сухой)|рис,рис круглый,рис длиннозёрный,басмати,жасмин|rice,white rice,basmati,jasmine rice|grain|🍚|344|6.7|0.7|78|1.4|||||vegan|60:порция крупы||
+rice_cooked|Рис отварной|рис варёный,варёный рис|cooked rice,boiled rice|grain|🍚|130|2.7|0.3|28|0.4|||||vegan|190:1 чашка||
+rice_brown|Рис бурый (сухой)|бурый рис,коричневый рис|brown rice|grain|🍚|362|7.5|2.7|76|3.4|||||vegan|60:порция крупы||
+buckwheat|Гречка (сухая)|гречневая крупа,гречка|buckwheat,buckwheat groats|grain|🟤|343|13.3|3.4|71.5|10|45|90|fruc|||45:порция крупы||
+buckwheat_cooked|Гречка отварная|гречка варёная,гречневая каша|cooked buckwheat|grain|🟤|110|4.2|1.1|21|2.7|135|270|fruc|||135:¾ чашки||
+oats|Овсяные хлопья (сухие)|овсянка,геркулес,овсяные хлопья|oats,rolled oats,oatmeal|grain|🥣|379|13|6.5|68|10|52|104|gos,fruc|gluten||40:½ чашки||Овёс часто содержит следы глютена
+oats_quick|Овсяные хлопья быстрые|быстрая овсянка,мелкие хлопья|quick oats,instant oats|grain|🥣|379|13|6.5|68|10|23|46|gos,fruc|gluten||23:¼ чашки|oats|
+quinoa|Киноа (сухая)|квиноа,киноа|quinoa|grain|🌾|368|14|6|64|7|||||vegan|50:порция крупы||
+millet|Пшено (сухое)|пшено,пшённая крупа|millet|grain|🌾|378|11|4.2|73|8.5|||||vegan|50:порция крупы||
+corn_grits|Кукурузная крупа, полента|полента,кукурузная крупа,мамалыга|polenta,cornmeal,grits|grain|🌽|370|8.4|1.2|79|3.9|||||vegan|50:порция крупы||
+pasta_wheat|Макароны пшеничные (сухие)|макароны,спагетти,паста,лапша пшеничная|pasta,spaghetti,noodles,macaroni|grain|🍝|371|13|1.5|75|3.2|25|50|fruc,gos|gluten,egg||25:½ чашки отварных|pasta_gf,rice_noodles|
+pasta_gf|Макароны безглютеновые|безглютеновая паста,рисовые макароны,кукурузные макароны|gluten-free pasta,gluten free pasta|grain|🍝|357|7|1.5|79|2|||||vegan|70:порция||
+rice_noodles|Рисовая лапша (сухая)|лапша рисовая,фунчоза рисовая|rice noodles,rice vermicelli|grain|🍜|364|6|0.6|80|1.6|||||vegan|60:порция||
+soba|Лапша соба|гречневая лапша|soba,soba noodles|grain|🍜|336|14|0.7|74|3|30|60|fruc|gluten||30:⅓ чашки отварной||Часто содержит пшеничную муку
+bread_wheat|Хлеб пшеничный белый|белый хлеб,батон,тостовый хлеб,хлеб|white bread,bread,wheat bread|grain|🍞|265|9|3.2|49|2.7|24|48|fruc|gluten||30:1 ломтик|bread_sourdough,bread_gf|
+bread_rye|Хлеб ржаной|чёрный хлеб,бородинский,ржаной хлеб|rye bread|grain|🍞|259|8.5|3.3|48|5.8|||fruc|gluten||30:1 ломтик|bread_sourdough,bread_gf|
+bread_sourdough|Хлеб на закваске (пшеница/спельта)|хлеб на закваске,бездрожжевой хлеб,спельтовый хлеб|sourdough,sourdough bread,spelt sourdough|grain|🥖|230|9|1.5|47|3|70|140|fruc|gluten||70:2 ломтика||Именно долгая закваска: она расщепляет фруктаны
+bread_gf|Хлеб безглютеновый|безглютеновый хлеб|gluten-free bread,gluten free bread|grain|🍞|250|3|5|48|4|70|200|fruc|||70:2 ломтика||Проверяйте состав: инулин, мёд, соевая мука — высокие
+crispbread_rice|Хлебцы рисовые|рисовые хлебцы,галеты рисовые|rice cakes,rice crackers|grain|🍘|387|8|2.8|81|4|20|50|fruc|||20:2 хлебца||
+crackers|Крекеры пшеничные|крекер,галеты|crackers,saltine|grain|🍘|430|10|12|70|3|20|40|fruc|gluten||20:5 крекеров|crispbread_rice|
+couscous|Кускус (сухой)|кус-кус|couscous|grain|🌾|376|13|0.6|77|5|20|40|fruc|gluten||20:¼ чашки отварного|quinoa,millet|
+bulgur|Булгур (сухой)|булгур|bulgur|grain|🌾|342|12|1.3|76|12.5|30|60|fruc|gluten||30:¼ чашки отварного|quinoa|
+semolina|Манная крупа|манка|semolina|grain|🌾|333|10.3|1|73|3.6|20|40|fruc|gluten||20:2 ст. л.|corn_grits,rice_white|
+barley|Перловая крупа|перловка,ячмень,ячневая крупа|barley,pearl barley|grain|🌾|352|9.9|1.2|78|15.6|||fruc,gos|gluten||50:порция крупы|rice_white,quinoa|
+cornflakes|Кукурузные хлопья|корнфлекс|corn flakes,cornflakes|grain|🥣|357|7.5|0.4|84|3.3|15|30|fruc|gluten||15:½ чашки||Солодовый экстракт = глютен
+tortilla_corn|Тортилья кукурузная|кукурузная лепёшка|corn tortilla|grain|🫓|218|5.7|2.9|45|6.3|50|100|fruc|||50:2 лепёшки||
+tortilla_wheat|Тортилья пшеничная|лаваш,пшеничная лепёшка|wheat tortilla,flour tortilla,lavash|grain|🫓|312|8.3|8|52|3.5|35|70|fruc|gluten||35:1 лепёшка|tortilla_corn|
+potato_starch|Крахмал картофельный|крахмал|potato starch|grain|⚪|333|0.1|0|83|0|||||vegan|10:1 ст. л.||
+corn_starch|Крахмал кукурузный|кукурузный крахмал|corn starch,cornflour|grain|⚪|381|0.3|0.1|91|0.9|||||vegan|10:1 ст. л.||
+rice_flour|Мука рисовая|рисовая мука|rice flour|grain|🌾|366|6|1.4|80|2.4|||||vegan|100:⅔ чашки||
+wheat_flour|Мука пшеничная|мука,пшеничная мука|wheat flour,flour|grain|🌾|364|10|1|76|2.7|||fruc|gluten||30:¼ чашки|rice_flour,buckwheat_flour|
+buckwheat_flour|Мука гречневая|гречневая мука|buckwheat flour|grain|🌾|335|12.6|3.1|70|10|100|150|fruc|||100:⅔ чашки||
+almond_flour|Мука миндальная|миндальная мука|almond flour,almond meal|grain|🌰|571|21|50|20|10.6|24|48|gos|nuts||24:¼ чашки||
+popcorn|Попкорн|воздушная кукуруза|popcorn|grain|🍿|387|13|4.5|78|14.5|56|120|fruc|||30:3 чашки||Без карамели с мёдом и сырного порошка
+
+# ---------- Молочные продукты ----------
+milk|Молоко коровье|молоко,молоко 2.5%,молоко 3.2%|milk,whole milk,cow milk|dairy|🥛|52|2.8|2.5|4.7|0|20|50|lac|milk|dairy|200:1 стакан|milk_lf,almond_milk|Лактоза ~4,7 г на 100 мл
+milk_lf|Молоко безлактозное|безлактозное молоко|lactose-free milk,lactose free milk|dairy|🥛|50|2.8|2.5|4.7|0||||milk|dairy,lactose_free|200:1 стакан||
+kefir|Кефир|кефир 2.5%,кефир 1%|kefir|dairy|🥛|53|2.9|2.5|4|0|30|80|lac|milk|dairy|200:1 стакан|yogurt_lf|
+yogurt|Йогурт натуральный|йогурт,йогурт классический|yogurt,yoghurt,plain yogurt|dairy|🥛|66|5|3.2|3.5|0|30|80|lac|milk|dairy|150:1 баночка|yogurt_lf,coconut_yogurt|
+yogurt_lf|Йогурт безлактозный|безлактозный йогурт|lactose-free yogurt|dairy|🥛|66|5|3.2|3.5|0||||milk|dairy,lactose_free|150:1 баночка||
+greek_yogurt|Греческий йогурт|греческий|greek yogurt|dairy|🥛|73|10|2|3.6|0|40|100|lac|milk|dairy|150:1 баночка|yogurt_lf|
+cottage|Творог|творог 5%,творог 9%,творожок|cottage cheese,quark|dairy|🧀|121|17|5|1.8|0|40|100|lac|milk|dairy|100:½ пачки|feta|
+sour_cream|Сметана|сметана 15%,сметана 20%|sour cream|dairy|🥛|162|2.6|15|3|0|30|80|lac|milk|dairy|20:1 ст. л.||
+cream|Сливки|сливки 10%,сливки 20%,сливки 33%|cream,heavy cream|dairy|🥛|205|2.8|20|3.7|0|40|80|lac|milk|dairy|30:2 ст. л.||
+butter|Масло сливочное|масло 82%,сливочное масло|butter|fat|🧈|748|0.5|82.5|0.8|0||||milk|dairy|10:1 ч. л.||Лактозы следовые количества
+hard_cheese|Сыр твёрдый|сыр,гауда,российский сыр,чеддер,эмменталь,маасдам|cheese,cheddar,gouda,swiss cheese|dairy|🧀|356|25|27|2|0||||milk|dairy|30:2 ломтика||Выдержанные сыры почти без лактозы
+parmesan|Пармезан|пармиджано|parmesan|dairy|🧀|392|36|26|3.2|0||||milk|dairy|15:1 ст. л. тёртого||
+mozzarella|Моцарелла|моцарелла свежая|mozzarella|dairy|🧀|280|22|22|2.2|0|80|200|lac|milk|dairy|40:2 ломтика||
+feta|Фета и брынза|брынза,фета,сыр фета|feta|dairy|🧀|264|14|21|4|0||||milk|dairy|40:кубик||
+cream_cheese|Сливочный сыр|творожный сыр,филадельфия,маскарпоне|cream cheese,mascarpone|dairy|🧀|342|6|34|4|0|40|80|lac|milk|dairy|30:2 ст. л.||
+ricotta|Рикотта|рикотта сыр|ricotta|dairy|🧀|174|11|13|3|0|40|80|lac|milk|dairy|40:2 ст. л.||
+ryazhenka|Ряженка|ряженка 4%,варенец|baked milk|dairy|🥛|67|2.9|4|4.2|0|30|80|lac|milk|dairy|200:1 стакан|yogurt_lf|
+processed_cheese|Сыр плавленый|плавленый сырок,сыр плавленный|processed cheese|dairy|🧀|300|16|24|6.5|0|30|60|lac|milk|dairy|30:1 сырок||
+condensed_milk|Молоко сгущённое|сгущёнка,сгущенка|condensed milk|sweet|🥛|321|7.2|8.5|56|0|20|40|lac|milk|dairy|20:1 ст. л.||
+ice_cream|Мороженое пломбир|мороженое,пломбир,эскимо|ice cream|sweet|🍨|232|3.2|15|20|0|25|60|lac|milk|dairy|70:1 шарик|coconut_yogurt|
+
+# ---------- Растительные альтернативы ----------
+almond_milk|Миндальное молоко|миндальный напиток|almond milk|alt|🥛|24|0.6|1.1|3|0.3||||nuts|vegan|250:1 стакан||
+oat_milk|Овсяное молоко|овсяный напиток|oat milk|alt|🥛|46|1|1.5|7|0.8|125|250|gos,fruc|gluten|vegan|125:½ стакана|almond_milk,rice_milk|
+soy_milk|Соевое молоко (из соевого белка)|соевое молоко,соевый напиток|soy milk,soy protein milk|alt|🥛|33|3|1.6|1.7|0.4||||soy|vegan|250:1 стакан||Из цельных соевых бобов — высокий по ГОС
+rice_milk|Рисовое молоко|рисовый напиток|rice milk|alt|🥛|47|0.3|1|9|0.3|200|400|fruc||vegan|200:1 стакан||
+coconut_milk|Кокосовое молоко (консервированное)|кокосовые сливки|coconut milk,coconut cream|alt|🥥|197|2|21|2.8|0|60|125|sor||vegan|60:¼ банки||
+coconut_drink|Кокосовый напиток|кокосовое молоко напиток|coconut milk drink|alt|🥥|20|0.2|1|2.5|0|125|250|sor||vegan|125:½ стакана||
+tofu_firm|Тофу твёрдый|тофу|tofu,firm tofu|alt|🧊|144|15|8.7|2.8|2.3||||soy|vegan|160:⅔ чашки||Отжатая сыворотка уносит ГОС
+tofu_silken|Тофу шёлковый (мягкий)|мягкий тофу,шелковый тофу|silken tofu,soft tofu|alt|🧊|55|4.8|2.7|2.9|0.1|||gos|soy|vegan|100:½ упаковки|tofu_firm|
+tempeh|Темпе|темпех|tempeh|alt|🟫|192|20|11|7.6|5|100|200|gos|soy|vegan|100:порция||
+soy_yogurt|Соевый йогурт|йогурт соевый|soy yogurt|alt|🥛|66|3.5|2|7|0.6|38|100|gos|soy|vegan|38:2 ст. л.|coconut_yogurt|
+coconut_yogurt|Кокосовый йогурт|йогурт кокосовый|coconut yogurt|alt|🥥|120|1|10|6|1|125|250|sor||vegan|125:½ баночки||
+
+# ---------- Мясо и птица ----------
+chicken_breast|Куриная грудка|курица,куриное филе,грудка|chicken breast,chicken|meat|🍗|113|23.6|1.9|0.4|0|||||meat|150:1 филе||Любое мясо без маринадов с луком и чесноком — без FODMAP
+chicken_thigh|Куриное бедро|бедро куриное,окорочок|chicken thigh|meat|🍗|177|19.7|10.9|0|0|||||meat|150:2 бедра||
+turkey|Индейка (филе)|индейка,филе индейки|turkey|meat|🦃|114|23.7|1.5|0|0|||||meat|150:порция||
+beef|Говядина|говядина вырезка,телятина постная,стейк|beef,steak|meat|🥩|158|22|7.1|0|0|||||meat|150:порция||
+beef_mince|Фарш говяжий|фарш,говяжий фарш|minced beef,ground beef|meat|🥩|254|17.2|20|0|0|||||meat|150:порция||Готовый фарш в магазине бывает с луком — читайте состав
+pork|Свинина|свиная корейка,свинина постная|pork|meat|🥩|185|21|11|0|0|||||meat|150:порция||
+lamb|Баранина|ягнёнок|lamb|meat|🍖|202|16|15.3|0|0|||||meat|150:порция||
+veal|Телятина|телятина|veal|meat|🥩|97|19.7|1.2|0|0|||||meat|150:порция||
+rabbit|Кролик|крольчатина|rabbit|meat|🐇|156|21|8|0|0|||||meat|150:порция||
+duck|Утка|утиное филе|duck|meat|🦆|200|18.5|14|0|0|||||meat|150:порция||
+liver|Печень говяжья|печень,печёнка|liver,beef liver|meat|🟤|125|20|3.6|4|0|||||meat|100:порция||
+ham|Ветчина|ветчина варёная|ham|meat|🥓|145|14|9|2|0|50|100|fruc,lac||meat|50:3 ломтика||В составе бывают чеснок, лук и сухое молоко
+sausage|Колбаса варёная|докторская,колбаса,варёная колбаса|sausage,bologna|meat|🌭|257|12|22|2|0|30|60|fruc,lac||meat|50:2 ломтика|chicken_breast|Почти всегда со специями из чеснока и лука
+frankfurters|Сосиски|сосиски молочные,сардельки|frankfurters,hot dog sausage|meat|🌭|266|11|24|1.6|0|30|60|fruc,lac||meat|50:1 сосиска||
+bacon|Бекон|грудинка|bacon|meat|🥓|458|23|40|1|0|||||meat|30:2 полоски||
+
+# ---------- Рыба и морепродукты ----------
+salmon|Лосось|сёмга,лосось,форель лососевая|salmon|fish|🐟|208|20|13|0|0||||fish|fish|150:стейк||
+trout|Форель|форель радужная|trout|fish|🐟|141|19.9|6.2|0|0||||fish|fish|150:порция||
+cod|Треска|треска филе|cod|fish|🐟|82|18|0.7|0|0||||fish|fish|150:филе||
+pollock|Минтай|минтай филе,хек|pollock,hake|fish|🐟|72|16|0.9|0|0||||fish|fish|150:филе||
+mackerel|Скумбрия|макрель|mackerel|fish|🐟|205|18.6|13.9|0|0||||fish|fish|150:порция||
+herring|Сельдь солёная|селёдка,сельдь|herring|fish|🐟|217|19.8|15.4|0|0||||fish|fish|60:кусочек||Сельдь «под шубой» и в маринаде с луком — нельзя
+tuna_canned|Тунец консервированный|тунец|tuna,canned tuna|fish|🐟|116|26|1|0|0||||fish|fish|100:½ банки||
+caviar|Икра красная|икра лососевая|salmon roe,caviar|fish|🔴|249|31.6|13.8|0|0||||fish|fish|20:1 ст. л.||
+shrimp|Креветки|креветка,королевские креветки|shrimp,prawns|fish|🦐|99|24|0.3|0.2|0||||shellfish|seafood|150:порция||
+squid|Кальмар|кальмары|squid,calamari|fish|🦑|92|15.6|1.4|3.1|0||||shellfish|seafood|150:порция||
+mussels|Мидии|мидии в раковинах|mussels|fish|🦪|86|12|2.2|3.7|0||||shellfish|seafood|150:порция||
+crab_sticks|Крабовые палочки|сурими,крабовое мясо|crab sticks,surimi|fish|🦀|95|6|1|10|0|50|100|sor|fish,egg|fish|50:3 палочки||Часто содержат сорбит (Е420)
+
+# ---------- Яйца ----------
+egg|Яйцо куриное|яйца,яйцо|egg,eggs|egg|🥚|157|12.7|10.9|0.7|0||||egg|egg|55:1 яйцо||
+quail_egg|Яйцо перепелиное|перепелиные яйца|quail egg|egg|🥚|168|11.9|13.1|0.6|0||||egg|egg|50:5 яиц||
+
+# ---------- Бобовые ----------
+chickpeas_canned|Нут консервированный|нут,турецкий горох|chickpeas,garbanzo,canned chickpeas|legume|🫘|139|7|2.6|22|6|42|100|gos|||42:¼ чашки||Промывайте: ГОС уходят в жидкость
+chickpeas_boiled|Нут отварной|нут варёный|boiled chickpeas|legume|🫘|164|8.9|2.6|27|7.6|20|40|gos|||20:2 ст. л.|chickpeas_canned|
+lentils_canned|Чечевица консервированная|чечевица|lentils,canned lentils|legume|🫘|114|7.6|0.4|20|3.8|46|90|gos,fruc|||46:¼ чашки||
+lentils_red|Чечевица красная отварная|красная чечевица|red lentils|legume|🫘|116|9|0.4|20|8|23|46|gos,fruc|||23:2 ст. л.|lentils_canned|
+beans_red|Фасоль красная консервированная|фасоль красная,фасоль в томате|kidney beans,red beans|legume|🫘|109|7|0.5|20|6|42|85|gos,fruc|||42:¼ чашки||
+beans_white|Фасоль белая отварная|фасоль белая,фасоль|white beans,navy beans,cannellini|legume|🫘|139|9.7|0.4|25|6.3|||gos,fruc|||80:½ чашки|lentils_canned|
+black_beans|Фасоль чёрная|чёрная фасоль|black beans|legume|🫘|132|8.9|0.5|23.7|8.7|40|80|gos,fruc|||40:¼ чашки||
+split_peas|Горох колотый|горох,гороховый суп|split peas|legume|🫛|118|8.3|0.4|21|8.3|||gos|||80:½ чашки|lentils_canned|
+edamame|Эдамаме|соевые бобы молодые|edamame|legume|🫛|121|11.9|5.2|8.9|5.2|75|150|fruc|soy||75:½ чашки||
+mung_beans|Маш отварной|маш,бобы мунг|mung beans|legume|🫘|105|7|0.4|19|7.6|46|100|gos,fruc|||46:¼ чашки||
+hummus|Хумус|хумус классический|hummus|legume|🫘|166|7.9|9.6|14|6|||gos,fruc|sesame||30:2 ст. л.|tahini|Нут + чеснок — двойной удар
+
+# ---------- Орехи и семена ----------
+almonds|Миндаль|миндаль орехи|almond,almonds|nut|🌰|579|21|50|22|12.5|12|24|gos|nuts||12:10 орехов||
+walnuts|Грецкий орех|грецкие орехи|walnut,walnuts|nut|🌰|654|15|65|14|6.7|30|100|gos|nuts||30:10 половинок||
+hazelnuts|Фундук|лесной орех|hazelnut,hazelnuts|nut|🌰|628|15|61|17|9.7|15|30|gos|nuts||15:10 орехов||
+cashews|Кешью|кешью орехи|cashew,cashews|nut|🌰|553|18|44|30|3.3|||gos,fruc|nuts||30:горсть|macadamia,walnuts|
+pistachios|Фисташки|фисташка|pistachio,pistachios|nut|🌰|562|20|45|28|10|||gos,fruc|nuts||30:горсть|walnuts,peanuts|
+peanuts|Арахис|земляной орех|peanut,peanuts|nut|🥜|567|26|49|16|8.5||||peanut|vegan|28:32 ореха||
+peanut_butter|Арахисовая паста|арахисовое масло|peanut butter|nut|🥜|588|25|50|20|6||||peanut|vegan|32:2 ст. л.||Без патоки и мёда
+pecan|Пекан|орех пекан|pecan,pecans|nut|🌰|691|9|72|14|9.6|30|100|fruc|nuts||30:10 половинок||
+macadamia|Макадамия|орех макадамия|macadamia|nut|🌰|718|8|76|14|8.6||||nuts|vegan|40:20 орехов||
+pine_nuts|Кедровые орехи|кедровый орех,пинии|pine nuts|nut|🌰|673|13.7|68|13|3.7|14|100|fruc|nuts||14:1 ст. л.||
+brazil_nuts|Бразильский орех|бразильские орехи|brazil nut,brazil nuts|nut|🌰|659|14|67|12|7.5|30|60|gos|nuts||10:2 ореха||
+sunflower_seeds|Семечки подсолнечные|семечки,подсолнечник семена|sunflower seeds|nut|🌻|584|21|51|20|8.6|6|30|fruc|||6:2 ч. л.|pumpkin_seeds|
+pumpkin_seeds|Тыквенные семечки|семечки тыквы|pumpkin seeds,pepitas|nut|🎃|559|30|49|11|6|||||vegan|23:2 ст. л.||
+chia|Семена чиа|чиа|chia,chia seeds|nut|⚫|486|17|31|42|34|24|48|fruc|||12:1 ст. л.||
+flax|Семена льна|лён,льняное семя|flaxseed,linseed,flax|nut|🟤|534|18|42|29|27|15|30|gos|||15:1 ст. л.||
+sesame|Кунжут|семена кунжута|sesame,sesame seeds|nut|⚪|573|18|50|23|12|22|60|fruc|sesame||10:1 ст. л.||
+tahini|Тахини|кунжутная паста|tahini|nut|⚪|595|17|54|21|9|20|40|fruc|sesame||15:1 ст. л.||
+
+# ---------- Масла и жиры ----------
+olive_oil|Масло оливковое|оливковое масло|olive oil|fat|🫒|884|0|100|0|0|||||vegan|10:1 ст. л.||
+sunflower_oil|Масло подсолнечное|растительное масло,подсолнечное масло|sunflower oil,vegetable oil|fat|🌻|884|0|100|0|0|||||vegan|10:1 ст. л.||
+coconut_oil|Масло кокосовое|кокосовое масло|coconut oil|fat|🥥|892|0|99|0|0|||||vegan|10:1 ст. л.||
+garlic_oil|Масло с чесноком (настоянное)|чесночное масло,масло чесночное|garlic infused oil,garlic oil|fat|🧄|884|0|100|0|0|||||vegan|10:1 ст. л.||Главная замена чеснока: фруктаны не переходят в масло
+ghee|Масло топлёное (гхи)|гхи,топлёное масло|ghee|fat|🧈|900|0.3|99.5|0|0||||milk|dairy|10:1 ч. л.||
+mayonnaise|Майонез|майонез провансаль|mayonnaise,mayo|fat|🥚|680|1|75|2.6|0||||egg,mustard|egg|20:1 ст. л.||Без чеснока в составе
+
+# ---------- Сладкое ----------
+sugar|Сахар|сахар белый,сахар тростниковый,рафинад|sugar|sweet|🍬|387|0|0|100|0|||||vegan|10:2 ч. л.||Сахароза — это глюкоза + фруктоза 1:1, она безопасна
+honey|Мёд|мед,мёд цветочный|honey|sweet|🍯|304|0.3|0|82|0.2|4|20|fru||honey|21:1 ст. л.|maple,sugar|
+maple|Кленовый сироп|сироп клёна|maple syrup|sweet|🍁|260|0|0|67|0|||||vegan|40:2 ст. л.||
+rice_malt|Рисовый сироп|рисовый солодовый сироп|rice malt syrup,rice syrup|sweet|🍯|316|0|0|78|0|||||vegan|20:1 ст. л.||
+agave|Сироп агавы|агава|agave,agave syrup|sweet|🌵|310|0|0|76|0|5|10|fru||vegan|20:1 ст. л.|maple|
+jam|Джем клубничный|варенье клубничное,джем|strawberry jam,jam|sweet|🍓|250|0.4|0.1|63|1|40|80|fru||vegan|20:1 ст. л.||Варенье из яблок, груш, вишни — высокие
+dark_chocolate|Шоколад тёмный (70–85%)|горький шоколад,тёмный шоколад|dark chocolate|sweet|🍫|600|7.8|46|24|11|30|60|fruc|soy|vegan|30:5 долек||
+milk_chocolate|Шоколад молочный|молочный шоколад|milk chocolate|sweet|🍫|535|7.7|30|59|3.4|15|25|lac|milk,soy|dairy|15:3 дольки|dark_chocolate|
+zefir|Зефир|пастила,маршмеллоу|marshmallow|sweet|🍥|304|0.8|0.1|79|0.9|20|40|fru,sor|||35:1 штука||Классический зефир и пастила — на яблочном пюре
+marmalade|Мармелад|мармелад желейный|jelly sweets,gummies|sweet|🍬|321|0.1|0|80|0|30|60|fru|||30:3 штуки||Сорбит в составе = высокий
+cookies|Печенье затяжное|печенье,мария,крекер сладкий|biscuits,cookies|sweet|🍪|417|7.5|12|72|2|20|40|fruc|gluten,milk,egg||20:2 штуки||
+halva|Халва подсолнечная|халва|halva|sweet|🟫|516|11.6|29.7|54|4.6|20|40|fruc|||30:кусочек||
+chips|Чипсы картофельные|чипсы|potato chips,crisps|sweet|🥔|536|7|35|53|4.4|||||vegan|30:маленькая пачка||Только солёные: вкусы «сметана-лук», «чеснок» — высокие
+corn_chips|Кукурузные чипсы|начос,тортилья чипсы|corn chips,tortilla chips,nachos|sweet|🌽|497|7|23|66|5|50|100|fruc||vegan|50:пачка||
+gum_sugarfree|Жевательная резинка без сахара|жвачка,жевательная резинка|sugar-free gum|sweet|🟢|240|0|0|95|0|||sor|||2:1 подушечка||Ксилит, мальтит, сорбит — полиолы
+stevia|Стевия|стевиозид|stevia|sweet|🌿|0|0|0|0|0|||||vegan|1:1 пакетик||
+erythritol|Эритрит|эритритол|erythritol|sweet|⚪|0|0|0|100|0|||||vegan|5:1 ч. л.||Плохо изучен, большие количества могут давить на кишечник
+xylitol|Ксилит|ксилитол,Е967|xylitol|sweet|⚪|240|0|0|100|0|||sor|||5:1 ч. л.|stevia,sugar|
+sorbitol|Сорбит|сорбитол,Е420|sorbitol|sweet|⚪|260|0|0|100|0|||sor|||5:1 ч. л.|stevia,sugar|
+
+# ---------- Напитки ----------
+water|Вода|вода питьевая,минеральная вода|water|drink|💧|0|0|0|0|0|||||vegan|250:1 стакан||
+coffee|Кофе чёрный|эспрессо,американо,кофе|coffee,espresso,black coffee|drink|☕|2|0.1|0|0|0|||||vegan|60:1–2 порции эспрессо||Кофеин сам по себе может усиливать моторику кишечника
+coffee_instant|Кофе растворимый (порошок)|растворимый кофе|instant coffee|drink|☕|118|7.8|0.2|73|0|4|10|fruc||vegan|4:2 ч. л.||
+tea_black|Чай чёрный|чай|black tea,tea|drink|🫖|1|0|0|0.3|0|250|500|fruc||vegan|250:1 кружка||Крепко заваренный — фруктанов больше
+tea_green|Чай зелёный|зелёный чай|green tea|drink|🍵|1|0|0|0.2|0|||||vegan|250:1 кружка||
+tea_mint|Чай мятный|мята чай,перечная мята|peppermint tea,mint tea|drink|🌿|1|0|0|0.2|0|||||vegan|250:1 кружка||Мята может успокаивать кишечник
+tea_chamomile|Чай ромашковый|ромашка|chamomile tea|drink|🌼|1|0|0|0.2|0|||fruc|||250:1 кружка|tea_mint|
+tea_oolong|Чай улун|улун|oolong tea|drink|🫖|1|0|0|0.2|0|||fruc|||250:1 кружка|tea_green|
+juice_orange|Сок апельсиновый|апельсиновый сок,фреш апельсиновый|orange juice|drink|🧃|45|0.7|0.2|10|0.2|72|180|fru||vegan|125:½ стакана||
+juice_apple|Сок яблочный|яблочный сок|apple juice|drink|🧃|46|0.1|0.1|11|0.2|||fru,sor|||200:1 стакан|juice_orange,cranberry_juice|
+cranberry_juice|Морс клюквенный|клюквенный морс,сок клюквенный|cranberry juice|drink|🧃|46|0.4|0.1|11.5|0|160|300|fruc||vegan|200:1 стакан||
+tomato_juice|Сок томатный|томатный сок|tomato juice|drink|🍅|17|0.9|0.3|3.5|0.4|96|200|fru,fruc||vegan|200:1 стакан||
+kompot|Компот из сухофруктов|компот,узвар|dried fruit compote|drink|🍹|60|0.3|0|15|0|||fru,sor|||200:1 стакан|cranberry_juice|Яблоки, груши и чернослив в основе
+kvass|Квас|квас хлебный|kvass|drink|🍺|27|0.2|0|5.2|0|||fruc|gluten||250:1 стакан||
+kombucha|Комбуча|чайный гриб|kombucha|drink|🫖|18|0|0|4|0|180|360|fruc||vegan|180:¾ стакана||
+coconut_water|Кокосовая вода|вода кокосовая|coconut water|drink|🥥|19|0.7|0.2|3.7|1.1|100|200|sor,fruc||vegan|100:½ стакана||
+cocoa|Какао-порошок|какао|cocoa,cocoa powder|drink|🍫|228|19.6|13.7|58|37|8|30|fruc||vegan|8:2 ч. л.||
+soda|Газировка сладкая|кола,лимонад|soda,cola,soft drink|drink|🥤|42|0|0|10.6|0|330|660|fru||vegan|330:1 банка||С глюкозно-фруктозным сиропом — избегайте
+beer|Пиво|пиво светлое|beer|drink|🍺|43|0.5|0|3.6|0|375|750|fruc|gluten||375:1 банка||Алкоголь сам по себе раздражает кишечник
+wine|Вино|вино красное,вино белое,вино сухое|wine,red wine,white wine|drink|🍷|85|0.1|0|2.6|0|150|300|fru|sulfites||150:1 бокал||
+vodka|Водка|водка,джин,виски|vodka,gin,whisky|drink|🥃|231|0|0|0.1|0|||||vegan|30:1 рюмка||
+rum|Ром|ром тёмный|rum|drink|🥃|231|0|0|0|0|||fru|||30:1 рюмка|vodka|
+
+# ---------- Соусы и приправы ----------
+soy_sauce|Соевый соус|соус соевый|soy sauce|sauce|🥢|53|8|0.6|4.9|0.8|42|100|fruc|gluten,soy||15:1 ст. л.||Безглютеновый тамари — альтернатива при целиакии
+ketchup|Кетчуп|томатный соус|ketchup|sauce|🥫|112|1.7|0.1|26|0.3|13|26|fru,fruc||vegan|13:1 ст. л.|tomato_paste|
+mustard|Горчица|горчица русская,дижонская|mustard|sauce|🟡|66|4|4|5.5|3|12|50|fruc|mustard||5:1 ч. л.||
+balsamic|Уксус бальзамический|бальзамик|balsamic vinegar|sauce|🍶|88|0.5|0|17|0|21|42|fru||vegan|21:1 ст. л.|vinegar|
+vinegar|Уксус столовый и яблочный|уксус,яблочный уксус,винный уксус|vinegar,apple cider vinegar,white vinegar|sauce|🍶|18|0|0|0.9|0|||||vegan|15:1 ст. л.||
+worcestershire|Вустерширский соус|соус ворчестер|worcestershire sauce|sauce|🍶|78|0|0|19|0|42|80|gos,man|fish||10:2 ч. л.||
+pesto|Песто|соус песто|pesto|sauce|🌿|450|5|45|6|1.5|8|20|fruc|nuts,milk||8:½ ст. л.||
+miso|Мисо-паста|мисо|miso,miso paste|sauce|🥣|199|12|6|26|5.4|22|60|fruc|soy||22:2 пакетика||
+fish_sauce|Рыбный соус|соус рыбный|fish sauce|sauce|🐟|35|5|0|3.6|0||||fish|fish|10:2 ч. л.||
+oyster_sauce|Устричный соус|соус устричный|oyster sauce|sauce|🦪|51|1.4|0.3|11|0.3||||shellfish|seafood|15:1 ст. л.||
+adjika|Аджика|аджика острая|adjika|sauce|🌶️|59|1|3.7|5.8|1.6|||fruc|||10:2 ч. л.||Почти всегда с чесноком
+sriracha|Шрирача|соус шрирача|sriracha|sauce|🌶️|93|2|1|19|2|5|15|fru,fruc||vegan|5:1 ч. л.||
+stock_cube|Бульонный кубик|бульон кубик,бульонный порошок|stock cube,bouillon|sauce|🧊|250|10|15|20|0|||fruc|celery||5:1 кубик|salt|Ищите бульоны без лука и чеснока
+lemon_juice|Сок лимонный|лимонный сок|lemon juice,lime juice|sauce|🍋|22|0.4|0.2|6.9|0.3|21|125|fruc||vegan|10:2 ч. л.||
+capers|Каперсы|каперс|capers|sauce|🟢|23|2.4|0.9|4.9|3.2|||||vegan|9:1 ст. л.||
+tamari|Тамари (безглютеновый соевый соус)|тамари|tamari|sauce|🥢|60|10.5|0.1|5.6|0.8|42|100|fruc|soy||15:1 ст. л.||
+
+# ---------- Специи и травы ----------
+salt|Соль|соль поваренная,морская соль|salt|spice|🧂|0|0|0|0|0|||||vegan|2:щепотка||
+black_pepper|Перец чёрный молотый|перец чёрный,перец горошек|black pepper,pepper|spice|⚫|251|10.4|3.3|64|25|||||vegan|1:щепотка||
+paprika|Паприка молотая|паприка|paprika|spice|🔴|282|14|13|54|35|||||vegan|2:1 ч. л.||
+turmeric|Куркума|куркума молотая|turmeric|spice|🟡|312|9.7|3.3|67|22.7|||||vegan|2:1 ч. л.||
+cumin|Зира (кумин)|зира,кумин|cumin|spice|🟤|375|17.8|22|44|10.5|||||vegan|2:1 ч. л.||
+coriander_seed|Кориандр молотый|кориандр|coriander seed|spice|🟤|298|12.4|17.8|55|42|||||vegan|2:1 ч. л.||
+cinnamon|Корица|корица молотая|cinnamon|spice|🟤|247|4|1.2|81|53|||||vegan|2:1 ч. л.||
+ginger_ground|Имбирь молотый|имбирь сушёный|ground ginger|spice|🫚|335|9|4.2|72|14|||||vegan|2:1 ч. л.||
+dill|Укроп|укроп свежий|dill|spice|🌿|43|3.5|1.1|7|2.1|||||vegan|5:пучок||
+parsley|Петрушка|петрушка свежая|parsley|spice|🌿|36|3|0.8|6.3|3.3|||||vegan|5:пучок||
+cilantro|Кинза|кориандр свежий|cilantro,coriander leaves|spice|🌿|23|2.1|0.5|3.7|2.8|||||vegan|5:пучок||
+basil|Базилик|базилик свежий|basil|spice|🌿|23|3.2|0.6|2.7|1.6|||||vegan|5:пучок||
+mint|Мята|мята свежая|mint|spice|🌿|70|3.8|0.9|15|8|||||vegan|3:несколько листьев||
+rosemary|Розмарин|розмарин сушёный|rosemary|spice|🌿|131|3.3|5.9|21|14|||||vegan|1:веточка||
+thyme|Тимьян|чабрец|thyme|spice|🌿|101|5.6|1.7|24|14|||||vegan|1:веточка||
+oregano|Орегано|душица|oregano|spice|🌿|265|9|4.3|69|42.5|||||vegan|1:1 ч. л.||
+bay_leaf|Лавровый лист|лаврушка|bay leaf|spice|🍃|313|7.6|8.4|75|26|||||vegan|1:1 лист||
+vanilla|Ваниль|ванилин,ванильный экстракт|vanilla|spice|🌼|288|0.1|0.1|13|0|||||vegan|2:1 ч. л.||
+asafoetida|Асафетида|асафетида порошок|asafoetida,hing|spice|🟡|297|4|1|68|4|||||vegan|1:щепотка||Даёт «луковый» вкус. Часто разбавлена пшеничной мукой — при целиакии ищите безглютеновую
+garlic_powder|Чеснок сушёный (порошок)|чесночный порошок,сушёный чеснок|garlic powder|spice|🧄|331|16.6|0.7|73|9|||fruc|||2:1 ч. л.|garlic_oil,asafoetida|
+onion_powder|Лук сушёный (порошок)|луковый порошок,сушёный лук|onion powder|spice|🧅|341|10.4|1|79|15|||fruc|||2:1 ч. л.|green_onion_tops,asafoetida|
+chili_powder|Перец чили молотый|красный перец молотый,кайенский перец|chili powder,cayenne|spice|🌶️|282|13.5|14|50|35|2|5|fru||vegan|1:щепотка||
+curry|Карри (смесь)|порошок карри|curry powder|spice|🟡|325|14|14|58|53|||fruc|||2:1 ч. л.|turmeric,cumin|Часто содержит чеснок и лук — смотрите состав
+
+# ---------- Готовые блюда ----------
+borsch|Борщ классический|борщ,щи|borscht|dish|🍲|49|1.1|2.2|6.7|1.5|||fruc,gos|||300:тарелка||Лук, чеснок и бульон на них. Рецепт без лука — в разделе «Рецепты»
+plov|Плов|плов с мясом|pilaf,plov|dish|🍛|170|7|7|20|1|||fruc|||250:порция||Лук и чеснок в зирвак. Смотрите версию на чесночном масле в рецептах
+pelmeni|Пельмени|вареники,манты|dumplings,pelmeni|dish|🥟|275|12|13|29|1.5|||fruc|gluten,egg|meat|200:порция||Пшеничное тесто + лук в фарше
+bliny|Блины на молоке|блины,блинчики|pancakes,crepes|dish|🥞|233|6|12|26|1|30|60|fruc,lac|gluten,milk,egg||60:1 блин||
+syrniki|Сырники|творожники|cottage cheese pancakes,syrniki|dish|🥞|220|16|9|18|0.5|50|100|lac,fruc|gluten,milk,egg||100:2 сырника||
+olivier|Салат оливье|оливье|olivier salad,russian salad|dish|🥗|198|5.5|16.5|6.6|1.5|30|80|gos,fruc|egg,mustard||150:порция||Горошек и лук
+oatmeal_milk|Овсяная каша на молоке|каша овсяная,овсянка на молоке|porridge,oatmeal porridge|dish|🥣|102|3.2|4.1|14.2|1.5|100|200|lac,gos,fruc|gluten,milk|dairy|250:тарелка|oats|Сварите на безлактозном молоке — станет безопасной
+pizza|Пицца|пицца маргарита|pizza|dish|🍕|266|11|10|33|2|50|100|fruc,lac|gluten,milk||100:1 кусок||
+sushi|Роллы и суши|роллы,суши,филадельфия|sushi,rolls|dish|🍣|150|6|2|28|0.5||||fish|fish|200:8 штук||Избегайте сливочного сыра, авокадо в большом количестве и чесночных соусов
+shawarma|Шаурма|шаверма,донер|shawarma,doner,kebab wrap|dish|🌯|230|12|11|21|1.5|||fruc,lac|gluten,milk||300:1 штука||Лаваш, лук, чесночный соус
+burger|Бургер|гамбургер,чизбургер|burger,hamburger|dish|🍔|250|13|12|24|1.3|||fruc|gluten,milk,egg,mustard||200:1 штука||
+chicken_soup|Суп куриный с лапшой|куриный суп,суп с вермишелью|chicken noodle soup|dish|🍜|40|2.5|1.5|4|0.3|||fruc|gluten|meat|300:тарелка||Классический — с луком. Сварите на чесночном масле с зелёным луком

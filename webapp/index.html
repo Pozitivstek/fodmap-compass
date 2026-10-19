@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>ФудКомпас</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/themes.css?v=1">
+  <link rel="stylesheet" href="css/app.css?v=1">
+  <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"><i></i><i></i><i></i></div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="ringGradient" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="var(--accent)"></stop>
+        <stop offset="100%" stop-color="var(--accent-2)"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+  <main class="app" id="app">
+    <div class="splash"><div><div class="logo">🧭</div><p class="muted">Загружаем ФудКомпас…</p></div></div>
+  </main>
+  <nav class="tabbar hidden" id="tabbar" aria-label="Разделы">
+    <button class="tab" data-tab="/home"><span class="ic">🏠</span>Главная</button>
+    <button class="tab" data-tab="/foods"><span class="ic">🔍</span>Продукты</button>
+    <button class="tab" data-tab="/diary"><span class="ic">📒</span>Дневник</button>
+    <button class="tab" data-tab="/recipes"><span class="ic">🍳</span>Рецепты</button>
+    <button class="tab" data-tab="/insights"><span class="ic">📊</span>Анализ</button>
+  </nav>
+  <div id="layer"></div>
+  <script type="module" src="js/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# ФудКомпас: мини-приложение Telegram. Сам сервис живёт на домашнем сервере,
+# сюда он приходит через обратный SSH-туннель (deploy/fodmap-tunnel.service) на 127.0.0.1:8095.
+fodmap.188-130-207-170.sslip.io {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		# Мини-приложение открывается во фрейме web.telegram.org, а сканеру нужна камера.
+		Content-Security-Policy "frame-ancestors https://web.telegram.org https://*.telegram.org"
+		Permissions-Policy "camera=(self), microphone=(), geolocation=()"
+		-Server
+	}
+
+	reverse_proxy 127.0.0.1:8095 {
+		health_uri /api/health
+		health_interval 60s
+	}
+}
