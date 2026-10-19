@@ -51,6 +51,13 @@ def test_texts(catalog):
     assert keyboard.inline_keyboard[0][0].callback_data == "rx:5:great"
 
 
+def test_welcome_fits_one_telegram_message():
+    from app.bot.texts import TELEGRAM_TEXT_LIMIT, WELCOME
+    text = WELCOME.format(name="Очень-длинное-имя-пользователя-в-телеграме")
+    assert len(text) <= TELEGRAM_TEXT_LIMIT
+    assert "/report" in text and "320 продуктов" in text
+
+
 async def test_start_help_and_lookup(ctx):
     handlers = _handlers(ctx)
     await _onboard(ctx)
