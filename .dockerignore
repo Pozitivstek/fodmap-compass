@@ -1,7 +1,7 @@
 .env
 .venv
 .git
-storage
+/storage
 tests
 docs
 deploy

@@ -5,7 +5,7 @@ __pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
-storage/
+/storage/
 *.db
 *.db-wal
 *.db-shm
